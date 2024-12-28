@@ -18,7 +18,7 @@ int main()
     std::string s1 = $ GetString $$;
     // Same as `F1(GetString(), 123);`.
     $ F1, $ GetString $$, 123 $$;
-    // Same as `F1([]{ return "asd"; }, 321);`.
+    // Same as `F1([]{ return "asd"; }(), 321);`.
     $ F1, $ []{ return "asd"; } $$, 321 $$;
     // Same as `[](int a, const std::string& b){ std::cout << a << ' ' << b << '\n'; }(333, "qweqwe");`.
     $ [](int a, const std::string& b){ std::cout << a << ' ' << b << '\n'; }, 333, "qweqwe" $$;
