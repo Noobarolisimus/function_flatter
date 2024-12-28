@@ -1,5 +1,5 @@
 # Introduction
-Have you ever wanted to scramble you code by using _that_ funtion language notation of functions _aka_ [lambda notation](https://en.wikipedia.org/wiki/Lambda_calculus)? Use this library to make your dreams come true!
+Have you ever wanted to scramble you code by using _that_ function language notation of functions _aka_ [lambda notation](https://en.wikipedia.org/wiki/Lambda_calculus)? Use this library to make your dreams come true!
 
 # Requirements
 You need at least c++20. Tested on clang 17.0.6 .
