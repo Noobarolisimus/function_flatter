@@ -9,8 +9,8 @@ std::string GetString(){
     return "qwe";
 }
 
-int overloaded(float a, float b) { return a + b; }
-int overloaded(int   a, float b) { return a + b; }
+int Overloaded(float a, float b) { return a + b; }
+int Overloaded(int   a, float b) { return a + b; }
 
 int main()
 {
@@ -32,9 +32,9 @@ int main()
     std::string s2 = $pick(int) std::to_string, 123 $$;
     
     // You should specifie all parameter types.
-    // `$pick(int) overloaded, 1, 2 $$;` cause an error,
-    // though we clearly wanted pick `overloaded(int, float)`.
+    // `$pick(int) Overloaded, 1, 2 $$;` cause an error,
+    // though we clearly wanted pick `Overloaded(int, float)`.
     
-    // Same as `overloaded(1, 2)`.
-    $pick(int, float) overloaded, 1, 2 $$;
+    // Same as `Overloaded(1, 2)`.
+    $pick(int, float) Overloaded, 1, 2 $$;
 }
