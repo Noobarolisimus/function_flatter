@@ -1,11 +1,13 @@
-# Introduction
+****[z](https://)# Introduction
+
 Have you ever wanted to scramble you code by using _that_ function language notation of functions _aka_ [lambda notation](https://en.wikipedia.org/wiki/Lambda_calculus)? Use this library to make your dreams come true!
 
 # Requirements
+
 You need at least c++20. Tested on clang 17.0.6 .
 
-
 # How it works
+
 Start with `$`, then put function name, then put arguments (if any) and then end with `$$`. Each element inside of `$ ... $$` should be separeted with `,`. A function name, an argument, a `$ ... $$` statement are considered as an element. For example: <br>
 `$ f $$;` <br>
 `$ f, 123 $$;` <br>
@@ -13,6 +15,7 @@ Start with `$`, then put function name, then put arguments (if any) and then end
 Also see `$pick()` below.
 
 ## examples.cpp
+
 ```cpp
 #include <iostream>
 #include "function_flatter.hpp"
@@ -34,7 +37,7 @@ int main()
     std::string s1 = $ GetString $$;
     // Same as `F1(GetString(), 123);`.
     $ F1, $ GetString $$, 123 $$;
-    // Same as `F1([]{ return "asd"; }, 321);`.
+    // Same as `F1([]{ return "asd"; }(), 321);`.
     $ F1, $ []{ return "asd"; } $$, 321 $$;
     // Same as `[](int a, const std::string& b){ std::cout << a << ' ' << b << '\n'; }(333, "qweqwe");`.
     $ [](int a, const std::string& b){ std::cout << a << ' ' << b << '\n'; }, 333, "qweqwe" $$;
@@ -46,12 +49,13 @@ int main()
     // Fuction overloading becomes wierd. You should pick wanted parameter types.
     // Same as `std::string s2 = std::to_string(123);`.
     std::string s2 = $pick(int) std::to_string, 123 $$;
-    
+  
     // You should specifie all parameter types.
     // `$pick(int) Overloaded, 1, 2 $$;` cause an error,
     // though we clearly wanted pick `Overloaded(int, float)`.
-    
+  
     // Same as `Overloaded(1, 2)`.
     $pick(int, float) Overloaded, 1, 2 $$;
 }
 ```
+
