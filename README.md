@@ -1,4 +1,4 @@
-****[z](https://)# Introduction
+# Introduction
 
 Have you ever wanted to scramble you code by using _that_ function language notation of functions _aka_ [lambda notation](https://en.wikipedia.org/wiki/Lambda_calculus)? Use this library to make your dreams come true!
 
